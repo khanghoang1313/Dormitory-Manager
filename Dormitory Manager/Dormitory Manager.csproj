@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SSDTUnitTestPath Condition="'$(SSDTUnitTestPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB</SSDTUnitTestPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SSDTPath Condition="'$(SSDTPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\130</SSDTPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E88B708C-3105-419C-8879-3DBF8F8686FE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dormitory_Manager</RootNamespace>
+    <AssemblyName>Dormitory Manager</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v20.1" />
+    <Reference Include="DevExpress.Data.Desktop.v20.1" />
+    <Reference Include="DevExpress.Data.v20.1" />
+    <Reference Include="DevExpress.Images.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Mvvm.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v20.1.Core" />
+    <Reference Include="DevExpress.TreeMap.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v20.1" />
+    <Reference Include="DevExpress.Xpo.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v20.1" />
+    <Reference Include="DevExpress.Sparkline.v20.1.Core" />
+    <Reference Include="DevExpress.XtraEditors.v20.1" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="addCustomerinfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addCustomerinfo.Designer.cs">
+      <DependentUpon>addCustomerinfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addRoom.Designer.cs">
+      <DependentUpon>addRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addService.Designer.cs">
+      <DependentUpon>addService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addStaff.Designer.cs">
+      <DependentUpon>addStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addTenacy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addTenacy.Designer.cs">
+      <DependentUpon>addTenacy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataProvider.cs" />
+    <Compile Include="editCustomerinfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editCustomerinfo.Designer.cs">
+      <DependentUpon>editCustomerinfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editRoom.Designer.cs">
+      <DependentUpon>editRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editService.Designer.cs">
+      <DependentUpon>editService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editStaff.Designer.cs">
+      <DependentUpon>editStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editTenacy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editTenacy.Designer.cs">
+      <DependentUpon>editTenacy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CustomerMod.cs" />
+    <Compile Include="Models\RoomMod.cs" />
+    <Compile Include="Models\ServiceMod.cs" />
+    <Compile Include="Models\StaffMod.cs" />
+    <Compile Include="Models\TenacyMod.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC_Check.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Check.Designer.cs">
+      <DependentUpon>UC_Check.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Customerinfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Customerinfo.Designer.cs">
+      <DependentUpon>UC_Customerinfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Desposit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Desposit.Designer.cs">
+      <DependentUpon>UC_Desposit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Room.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Room.Designer.cs">
+      <DependentUpon>UC_Room.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Service.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Service.Designer.cs">
+      <DependentUpon>UC_Service.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Staffinfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Staffinfo.Designer.cs">
+      <DependentUpon>UC_Staffinfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_TenacyList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_TenacyList.Designer.cs">
+      <DependentUpon>UC_TenacyList.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="addCustomerinfo.resx">
+      <DependentUpon>addCustomerinfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addRoom.resx">
+      <DependentUpon>addRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addService.resx">
+      <DependentUpon>addService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addStaff.resx">
+      <DependentUpon>addStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addTenacy.resx">
+      <DependentUpon>addTenacy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editCustomerinfo.resx">
+      <DependentUpon>editCustomerinfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editRoom.resx">
+      <DependentUpon>editRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editService.resx">
+      <DependentUpon>editService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editStaff.resx">
+      <DependentUpon>editStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editTenacy.resx">
+      <DependentUpon>editTenacy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UC_Check.resx">
+      <DependentUpon>UC_Check.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Customerinfo.resx">
+      <DependentUpon>UC_Customerinfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Desposit.resx">
+      <DependentUpon>UC_Desposit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Room.resx">
+      <DependentUpon>UC_Room.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Service.resx">
+      <DependentUpon>UC_Service.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Staffinfo.resx">
+      <DependentUpon>UC_Staffinfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_TenacyList.resx">
+      <DependentUpon>UC_TenacyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup Condition="$(VisualStudioVersion) == '16.0'">
+    <Reference Include="Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>$(SSDTPath)\Microsoft.Data.Tools.Schema.Sql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Tools.Schema.Sql.UnitTesting, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>$(SSDTUnitTestPath)\Microsoft.Data.Tools.Schema.Sql.UnitTesting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>$(SSDTUnitTestPath)\Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <SsdtUnitTestVersion>3.1</SsdtUnitTestVersion>
+  </PropertyGroup>
+  <Import Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="$(VisualStudioVersion) != '15.0' And '$(SQLDBExtensionsRefPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="$(VisualStudioVersion) != '15.0' And '$(SQLDBExtensionsRefPath)' == ''" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
