@@ -37,8 +37,6 @@ namespace Dormitory_Manager
 
         private void aceHistory_Click(object sender, EventArgs e)
         {
-            UC_History a = new UC_History();
-            AddUC(a);
         }
 
         private void aceCustomerinfo_Click(object sender, EventArgs e)

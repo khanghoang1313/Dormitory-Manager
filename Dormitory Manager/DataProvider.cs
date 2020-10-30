@@ -6,13 +6,16 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Net;
+
 namespace Dormitory_Manager
 {
     class DataProvider
     {
         public static SqlConnection Connect()
         {
-            string CTR = "Data Source=TRONGTHOAI\\SQLEXPRESS;Initial Catalog=QLPHONGTRO;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            string PCName = Dns.GetHostName();
+            string CTR = "Data Source="+PCName+"\\SQLEXPRESS;Initial Catalog=QLPHONGTRO;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             SqlConnection con = new SqlConnection(CTR);
             con.InfoMessage += new SqlInfoMessageEventHandler(conn_InfoMessage);
             con.FireInfoMessageEventOnUserErrors = true;
