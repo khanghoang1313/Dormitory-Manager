@@ -90,7 +90,6 @@ namespace Dormitory_Manager
         private void UC_Room_Load(object sender, EventArgs e)
         {
             LoadRoom();
-            MessageBox.Show("Bạn đang sử dụng phần mềm quản lý phòng trọ");
         }
 
         private void setClear()
