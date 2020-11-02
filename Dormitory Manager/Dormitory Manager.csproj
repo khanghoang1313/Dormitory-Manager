@@ -215,6 +215,7 @@
     <Compile Include="Models\ServiceMod.cs" />
     <Compile Include="Models\StaffMod.cs" />
     <Compile Include="Models\TenacyMod.cs" />
+    <Compile Include="Models\WaterElectricmod.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UC_Check.cs">
@@ -258,6 +259,12 @@
     </Compile>
     <Compile Include="UC_TenacyList.Designer.cs">
       <DependentUpon>UC_TenacyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_WaterElectric.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_WaterElectric.Designer.cs">
+      <DependentUpon>UC_WaterElectric.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="addCustomerinfo.resx">
       <DependentUpon>addCustomerinfo.cs</DependentUpon>
@@ -323,6 +330,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_TenacyList.resx">
       <DependentUpon>UC_TenacyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_WaterElectric.resx">
+      <DependentUpon>UC_WaterElectric.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">

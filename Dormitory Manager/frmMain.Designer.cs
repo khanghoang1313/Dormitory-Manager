@@ -212,6 +212,7 @@
             this.aceBillofmonth.Name = "aceBillofmonth";
             this.aceBillofmonth.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.aceBillofmonth.Text = "Phiếu Ghi Điện Nước";
+            this.aceBillofmonth.Click += new System.EventHandler(this.aceBillofmonth_Click);
             // 
             // accordionControlElement6
             // 
