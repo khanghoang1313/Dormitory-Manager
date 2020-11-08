@@ -79,11 +79,11 @@
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.r});
-            this.accordionControl1.Location = new System.Drawing.Point(0, 31);
-            this.accordionControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.accordionControl1.Location = new System.Drawing.Point(0, 39);
+            this.accordionControl1.Margin = new System.Windows.Forms.Padding(5);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(204, 608);
+            this.accordionControl1.Size = new System.Drawing.Size(272, 860);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -212,7 +212,6 @@
             this.aceBillofmonth.Name = "aceBillofmonth";
             this.aceBillofmonth.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.aceBillofmonth.Text = "Phiếu Ghi Điện Nước";
-            this.aceBillofmonth.Click += new System.EventHandler(this.aceBillofmonth_Click);
             // 
             // accordionControlElement6
             // 
@@ -225,9 +224,8 @@
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
-            this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(2);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1038, 31);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1826, 39);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             // 
@@ -253,26 +251,25 @@
             // fluentMain
             // 
             this.fluentMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fluentMain.Location = new System.Drawing.Point(204, 31);
-            this.fluentMain.Margin = new System.Windows.Forms.Padding(4);
+            this.fluentMain.Location = new System.Drawing.Point(272, 39);
+            this.fluentMain.Margin = new System.Windows.Forms.Padding(5);
             this.fluentMain.Name = "fluentMain";
-            this.fluentMain.Size = new System.Drawing.Size(834, 608);
+            this.fluentMain.Size = new System.Drawing.Size(1554, 860);
             this.fluentMain.TabIndex = 0;
             // 
             // frmMain
             // 
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1038, 639);
+            this.ClientSize = new System.Drawing.Size(1826, 899);
             this.ControlContainer = this.fluentMain;
             this.Controls.Add(this.fluentMain);
             this.Controls.Add(this.accordionControl1);
             this.Controls.Add(this.fluentDesignFormControl1);
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
             this.InactiveGlowColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMain";
             this.NavigationControl = this.accordionControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
