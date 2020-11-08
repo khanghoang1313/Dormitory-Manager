@@ -15,7 +15,7 @@ namespace Dormitory_Manager
         public static SqlConnection Connect()
         {
             string PCName = Dns.GetHostName();
-            string CTR = "Data Source="+PCName+"\\SQLEXPRESS;Initial Catalog=QLPHONGTRO;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            string CTR = "Data Source="+PCName+ "\\Khang;Initial Catalog=QLPHONGTRO2310;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             SqlConnection con = new SqlConnection(CTR);
             con.InfoMessage += new SqlInfoMessageEventHandler(conn_InfoMessage);
             con.FireInfoMessageEventOnUserErrors = true;
@@ -45,6 +45,27 @@ namespace Dormitory_Manager
        
                 Connect().Close();
                 return false;
+            }
+        }
+
+
+
+        public static object _SQL_ExecuteScalar(string CTR)
+        {
+            
+             
+            try
+            {
+                SqlCommand cmd = new SqlCommand(CTR, Connect());
+                object icmd = cmd.ExecuteScalar();
+                Connect().Close();
+                return icmd;
+            }
+            catch (Exception ex)
+            {
+
+                Connect().Close();
+                return 0;
             }
         }
 

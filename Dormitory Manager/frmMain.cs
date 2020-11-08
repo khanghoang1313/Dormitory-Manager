@@ -68,5 +68,11 @@ namespace Dormitory_Manager
             UC_Staffinfo a = new UC_Staffinfo();
             AddUC(a);
         }
+
+        private void aceBillofmonth_Click(object sender, EventArgs e)
+        {
+            UC_Electron_Water a = new UC_Electron_Water();
+            AddUC(a);
+        }
     }
 }

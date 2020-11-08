@@ -149,6 +149,12 @@
     <Compile Include="addCustomerinfo.Designer.cs">
       <DependentUpon>addCustomerinfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="addElectron_Water.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addElectron_Water.Designer.cs">
+      <DependentUpon>addElectron_Water.cs</DependentUpon>
+    </Compile>
     <Compile Include="addRoom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +217,7 @@
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\CustomerMod.cs" />
+    <Compile Include="Models\Electron_WaterMod.cs" />
     <Compile Include="Models\RoomMod.cs" />
     <Compile Include="Models\ServiceMod.cs" />
     <Compile Include="Models\StaffMod.cs" />
@@ -234,6 +241,12 @@
     </Compile>
     <Compile Include="UC_Desposit.Designer.cs">
       <DependentUpon>UC_Desposit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Electron_Water.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Electron_Water.Designer.cs">
+      <DependentUpon>UC_Electron_Water.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_Room.cs">
       <SubType>UserControl</SubType>
@@ -261,6 +274,9 @@
     </Compile>
     <EmbeddedResource Include="addCustomerinfo.resx">
       <DependentUpon>addCustomerinfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addElectron_Water.resx">
+      <DependentUpon>addElectron_Water.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="addRoom.resx">
       <DependentUpon>addRoom.cs</DependentUpon>
@@ -311,6 +327,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Desposit.resx">
       <DependentUpon>UC_Desposit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Electron_Water.resx">
+      <DependentUpon>UC_Electron_Water.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Room.resx">
       <DependentUpon>UC_Room.cs</DependentUpon>
